@@ -52,36 +52,60 @@ Before you begin, ensure you have the following dependencies installed:
 - MySQL
 - Other project-specific dependencies (if any)
 
-### Installation
+## Installation
 
-1. Clone this repository to your local machine:
+Follow these steps to set up the project locally:
 
-   ```shell
-   git clone https://github.com/your-username/caloriefy.git
+1. Clone the repository:
 
-   
-1.Navigate to the project directory:
+   ```bash
+   git clone https://github.com/yourusername/skin-disease-prediction.git
+   ```
 
-cd caloriefy
+2. Create a virtual environment:
 
-2.Create a virtual environment 
-python -m venv venv
+   ```bash
+   python -m venv venv
+   ```
 
-3.Activate the virtual environment:
-venv\Scripts\activate
+3. Activate the virtual environment:
 
-4.Install project dependencies:
-pip install -r requirements.txt
+   - On Windows:
 
-5.Configure your database settings in the settings.py file
+     ```bash
+     venv\Scripts\activate
+     ```
 
-6.Apply database migrations:
-python manage.py migrate
+   - On macOS and Linux:
 
-7.Start the development server:
-python manage.py runserver
+     ```bash
+     source venv/bin/activate
+     ```
 
-8.Open your web browser and visit http://localhost:8000 to access Caloriefy.
+4. Install the required packages:
 
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+5. Configure the database settings in `settings.py` to connect to your MySQL database.
 
+6. Run migrations:
+
+   ```bash
+   python manage.py migrate
+   ```
+
+7. Create a superuser for admin access:
+
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+8. Start the development server:
+
+   ```bash
+   python manage.py runserver
+   ```
+
+9. Access the application in your web browser at `http://localhost:8000`.
